@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "demo_content_vimeo",
+  "version": "0.0.1",
+  "description": "demo_content_vimeo",
+  "icons": {
+    "16": "/img/logo-16.png",
+    "128": "/img/logo-128.png"
+  },
+  "content_scripts": [
+    {
+      "world": "MAIN",
+      "run_at": "document_start",
+      "js": ["/content.js"],
+      "matches": ["https://vimeo.com/*"]
+    },
+    {
+      "world": "MAIN",
+      "run_at": "document_idle",
+      "js": ["/content.js"],
+      "matches": ["https://vimeo.com/*"]
+    },
+    {
+      "world": "ISOLATED",
+      "run_at": "document_start",
+      "js": ["/content.js"],
+      "matches": ["https://vimeo.com/*"]
+    },
+    {
+      "world": "ISOLATED",
+      "run_at": "document_idle",
+      "js": ["/content.js"],
+      "matches": ["https://vimeo.com/*"]
+    }
+  ]
+}
